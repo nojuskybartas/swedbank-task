@@ -27,13 +27,13 @@ function FooterElement({title, collapsable, ...props}) {
 
     return (
         <div className="p-2 w-full h-auto">
-            <div className={`flex justify-between ${collapsable && 'cursor-pointer'} md:cursor-default w-full`} onClick={handleElementVisible}>
+            <div className={`flex justify-between ${collapsable && 'cursor-pointer'} md:cursor-default w-full h-fit`} onClick={handleElementVisible}>
                 <h1 className="font-bold text-lg">{title}</h1>
-                {collapsable && <ChevronDownIcon className="w-6 sb-color md:hidden"/>}
+                {collapsable && <ChevronDownIcon className="w-6 h-6 sb-color md:hidden"/>}
             </div>
             <div className="space-y-1">
                 {(visible || screenWidth>=768) && props.labels.map(label => {
-                    return <p className="sb-underline cursor-pointer w-fit">{label}</p>
+                    return <p className="sb-underline cursor-pointer w-fit h-full">{label}</p>
                 })}
             </div>
             <div className="text-sm text-gray-600">
