@@ -121,6 +121,10 @@ input[type=number] {
     @apply text-[#eb7c14];
   }
 
+  .sb-icon {
+    @apply w-6 h-6;
+  }
+
   .body-item {
     @apply p-3;
   }

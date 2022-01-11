@@ -33,28 +33,28 @@ function Header() {
                         <img src="https://www.swedbank.lt/webjars/webcomponents/2.2.7/assets/images/swedbank-logo.svg" className='w-48' alt='Swedbank'/>
                         <div className='items-center hidden lg:flex cursor-pointer'>
                             <p>Private</p>
-                            <ChevronDownIcon className='w-6 sb-color'/>
+                            <ChevronDownIcon className='sb-icon sb-color'/>
                         </div>
                     </div>
                     <div className='items-center flex ml-auto space-x-5'>
                         <div className='flex items-center ml-0 cursor-pointer'>
                             <p>EN</p>
-                            <ChevronDownIcon className='w-6 sb-color hidden lg:flex'/>
+                            <ChevronDownIcon className='sb-icon sb-color hidden lg:flex'/>
                         </div>
                         <div className='items-center hidden lg:flex cursor-pointer'>
                             <p className='sb-underline'>Become a customer</p>
                         </div>
                         <div className='items-center flex cursor-pointer'>
                             <div className='hidden lg:flex'>
-                                <LogoutIcon className='w-6 sb-color'/>
+                                <LogoutIcon className='sb-icon sb-color'/>
                                 <p className='sb-underline'>Log in</p>
                             </div>
                             <div className='flex lg:hidden'>
-                                <UserCircleIcon className='w-6'/>
+                                <UserCircleIcon className='sb-icon'/>
                             </div>
                         </div>
                         <div className='items-center flex lg:hidden cursor-pointer'>
-                            {toggleMenu ? <MenuAlt3Icon onClick={handleNavbar} className='w-6'/> : <MenuIcon onClick={handleNavbar} className='w-6'/>}
+                            {toggleMenu ? <MenuAlt3Icon onClick={handleNavbar} className='sb-icon'/> : <MenuIcon onClick={handleNavbar} className='sb-icon'/>}
                         </div>
                     </div>           
                 </section>
