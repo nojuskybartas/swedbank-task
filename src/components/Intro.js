@@ -1,5 +1,5 @@
-import { ChevronRightIcon } from "@heroicons/react/solid"
 import SbApplicationButtons from "./SbApplicationButtons"
+import SbFootlink from "./SbFootlink"
 
 function Intro() {
     return (
@@ -14,10 +14,7 @@ function Intro() {
                     <li><span><span className="sb-color">New!</span> Do not miss the opportunity to use the discount code of real estate companies, with which there will be no one-off loan administration fee. You will receive the discount code from the seller.</span></li>
                 </ul>
 
-                <div className="flex text-[#116370] text-sm font-semibold">
-                    <ChevronRightIcon className="w-4"/>
-                    <p className="sb-underline ">Find out your possibilities</p>
-                </div>
+                <SbFootlink label="Find out your possibilities"/>
 
                 <SbApplicationButtons/>
                 <p>Offer is valid from 01.01.2022 until 31.03.2022.</p>

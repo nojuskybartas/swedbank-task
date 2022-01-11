@@ -41,7 +41,7 @@ const SbSliderInput = ({ label, labelLeft, labelRight, step, min, max, ...props 
             <div className='md:w-full'>
                 <div className='flex rounded-md'>
                     <div className='sb-form-amount-adjust-button rounded-l-md md:hidden' onClick={() => helpers.setValue(field.value-step, true)}><MinusIcon className='sb-form-amount-adjust-button-icon'/></div>
-                    <Field type={screenWidth > 768 ? 'range' : 'number'} min={min} max={max} name={field.name} validate={snapInRange} className="sb-form-input text-center rounded-none border-l-0 border-r-0"/>
+                    <Field type={screenWidth >= 768 ? 'range' : 'number'} min={min} max={max} name={field.name} validate={snapInRange} className="sb-form-input text-center rounded-none border-l-0 border-r-0"/>
                     <div className='sb-form-amount-adjust-button rounded-r-md md:hidden' onClick={() => helpers.setValue(field.value+step, true)}><PlusIcon className='sb-form-amount-adjust-button-icon'/></div>
                 </div>
                 <div className='flex justify-between'>

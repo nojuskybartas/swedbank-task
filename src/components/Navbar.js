@@ -5,7 +5,7 @@ function Navbar() {
    
 
     return (
-        <div className="screen-dim lg:filter-none main-grid-item">
+        <div className="main-grid-item">
             <ul className="nb-list">
                 <li className='nb-item lg:flex-none hidden lg:flex'>
                     <HomeIcon className='w-7 h-7'/>
