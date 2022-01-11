@@ -1,4 +1,3 @@
-import { ChevronRightIcon } from "@heroicons/react/solid"
 import Form from "./Form"
 import Intro from "./Intro"
 
@@ -9,10 +8,7 @@ function Body() {
                 <Intro/>
                 <Form/>
             </div>
-            
-            
         </div>
-        
     )
 }
 

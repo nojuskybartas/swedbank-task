@@ -6,7 +6,7 @@ import SbGradient from './components/SbGradient';
 
 function App() {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <SbGradient/>
       <Header/>
       <Body/>
