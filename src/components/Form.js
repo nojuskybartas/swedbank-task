@@ -49,7 +49,7 @@ const SbForm = () => {
                         validateOnChange={false}    
                         >
                         {({ values }) => ( 
-                        <Form className=' flex flex-wrap'>
+                        <Form className='flex flex-wrap'>
                             <div className='flex-1 md:ml-[20%] md:mr-10'>
                                 <SbCheckBox label="Applying with a co-applicant" name="coapplicant"/>
                                 <SbCheckBox label="More than one dependant in family" name="dependant"/>
