@@ -21,12 +21,12 @@ function FooterElement({title, collapsable, ...props}) {
         return () => {
             window.removeEventListener('resize', changeWidth)
         }
-    
-      }, [])
+
+    }, [])
 
 
     return (
-        <div className="p-2">
+        <div className="p-2 w-full h-auto">
             <div className={`flex justify-between ${collapsable && 'cursor-pointer'} md:cursor-default w-full`} onClick={handleElementVisible}>
                 <h1 className="font-bold text-lg">{title}</h1>
                 {collapsable && <ChevronDownIcon className="w-6 sb-color md:hidden"/>}

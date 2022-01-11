@@ -14,7 +14,7 @@ function Intro() {
                     <li><span><span className="sb-color">New!</span> Do not miss the opportunity to use the discount code of real estate companies, with which there will be no one-off loan administration fee. You will receive the discount code from the seller.</span></li>
                 </ul>
 
-                <SbFootlink label="Find out your possibilities"/>
+                <SbFootlink label="Find out your possibilities" />
 
                 <SbApplicationButtons/>
                 <p>Offer is valid from 01.01.2022 until 31.03.2022.</p>
