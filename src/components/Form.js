@@ -6,6 +6,7 @@ import SbInputField from './form/SbInputField.js';
 import SbSliderInput from './form/SbSliderInput.js';
 import SbCalcOutput from './form/SbCalcOutput.js';
 import SbApplicationButtons from './SbApplicationButtons.js';
+import SbFootlink from './SbFootlink.js';
 
 const SbForm = () => {
 
@@ -96,10 +97,7 @@ const SbForm = () => {
 
                                 <SbApplicationButtons/>
 
-                                <div className="flex text-[#116370] text-sm font-semibold">
-                                    <ChevronRightIcon className="w-4 ml-[-5px]"/>
-                                    <p className="sb-underline ">Compare different loan options</p>
-                                </div>
+                                <SbFootlink label="Compare different loan options"/>
                                 <p>The data provided by the calculator is fake, and it gives you an unreal picture of what could be the size of your monthly payments for consumer credit.</p>
                             </div>
                         </Form>)} 

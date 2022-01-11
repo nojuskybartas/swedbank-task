@@ -27,7 +27,7 @@ function Header() {
 
     return (
         <div className='flex justify-center'>
-            <div className='main-grid-item'>
+            <div className='main-grid-item h-10%'>
                 <section className='grid grid-cols-2 items-center px-6 py-3 text-lg'>
                     <div className='flex space-x-5 cursor-pointer'>
                         <img src="https://www.swedbank.lt/webjars/webcomponents/2.2.7/assets/images/swedbank-logo.svg" className='w-48'/>

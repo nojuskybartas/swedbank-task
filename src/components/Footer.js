@@ -1,13 +1,13 @@
 import { ChevronDownIcon } from "@heroicons/react/outline"
 import { useEffect, useState } from "react"
 
-function FooterElement({title, collapsable=false, ...props}) {
+function FooterElement({title, collapsable, ...props}) {
 
-    const [visible, setVisible] = useState(false)
+    const [visible, setVisible] = useState(collapsable ? false : true)
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
     const handleElementVisible = () => {
-        setVisible(!visible)
+        collapsable && setVisible(!visible)
     }
     
     useEffect(() => {
@@ -27,17 +27,17 @@ function FooterElement({title, collapsable=false, ...props}) {
 
     return (
         <div className="p-2">
-            <div className={`flex justify-between ${collapsable && 'cursor-pointer'} md:cursor-default`} onClick={handleElementVisible}>
+            <div className={`flex justify-between ${collapsable && 'cursor-pointer'} md:cursor-default w-full`} onClick={handleElementVisible}>
                 <h1 className="font-bold text-lg">{title}</h1>
                 {collapsable && <ChevronDownIcon className="w-6 sb-color md:hidden"/>}
             </div>
             <div className="space-y-1">
-                {visible || screenWidth>768 && props.labels.map(label => {
+                {(visible || screenWidth>=768) && props.labels.map(label => {
                     return <p className="sb-underline cursor-pointer w-fit">{label}</p>
                 })}
             </div>
             <div className="text-sm text-gray-600">
-                {visible || screenWidth>768 && props.labels_small?.map(label => {
+                {(visible || screenWidth>=768) && props.labels_small?.map(label => {
                     return <p>{label}</p>
                 })}
             </div>
@@ -49,7 +49,7 @@ function Footer() {
     return (
         <div className="flex justify-center bg-[#be948048]">
             <div className=" mb-10 main-grid-item flex flex-col justify-between md:flex-row space-y-2 p-4">
-                <FooterElement title="Contacts" labels={['Frequently asked questions', 'Contacts, branches, ATMs','Book a consultation','About Swedbank']} labels_small={['Some company', 'Address', 'Bank account info', 'Legal stuff']}/>
+                <FooterElement title="Contacts" labels={['Frequently asked questions', 'Contacts, branches, ATMs','Book a consultation','About Swedbank']} labels_small={['Some company', 'Address', 'Bank account info', 'Legal stuff']} collapsable={false}/>
                 <FooterElement title="Useful links" labels={['Frequently asked questions', 'Contacts, branches, ATMs','Book a consultation','About Swedbank']} collapsable={true}/>
                 <FooterElement title="Legal Information" labels={['Frequently asked questions', 'Contacts, branches, ATMs','Book a consultation','About Swedbank']} collapsable={true}/>
                 <FooterElement title="Customer programmes" labels={['Frequently asked questions', 'Contacts, branches, ATMs','Book a consultation','About Swedbank']} collapsable={true}/>
