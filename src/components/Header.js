@@ -1,6 +1,7 @@
 import { ChevronDownIcon, LogoutIcon, UserCircleIcon, MenuIcon, MenuAlt3Icon } from '@heroicons/react/outline';
 import { useEffect, useState } from 'react';
 import Navbar from './Navbar';
+import SwedbankLogo from '../swedbank-logo.svg';
 
 function Header() {
 
@@ -30,7 +31,7 @@ function Header() {
             <div className='main-grid-item'>
                 <section className='grid grid-cols-2 items-center px-6 py-3 text-lg h-fit'>
                     <div className='flex space-x-5 cursor-pointer'>
-                        <img src="https://www.swedbank.lt/webjars/webcomponents/2.2.7/assets/images/swedbank-logo.svg" className='w-48' alt='Swedbank'/>
+                        <img src={SwedbankLogo} className='w-48' alt='Swedbank'/>
                         <div className='items-center hidden lg:flex cursor-pointer'>
                             <p>Private</p>
                             <ChevronDownIcon className='sb-icon sb-color'/>
